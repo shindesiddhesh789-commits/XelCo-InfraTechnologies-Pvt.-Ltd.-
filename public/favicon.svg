@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Meshion favicon">
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="#1F8B73" />
+  <path d="M15 50V14H24L32 27L40 14H49V50H41V28L32 41L23 28V50H15Z" fill="#FFFFFF" />
+  <circle cx="48" cy="18" r="4" fill="#7FE6B6" />
+</svg>

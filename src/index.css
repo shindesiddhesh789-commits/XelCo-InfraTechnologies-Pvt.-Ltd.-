@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 200 15% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 200 15% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 15% 20%;
+
+    --primary: 163 52% 38%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 170 15% 96%;
+    --secondary-foreground: 200 15% 20%;
+
+    --muted: 170 10% 96%;
+    --muted-foreground: 200 10% 46%;
+
+    --accent: 163 60% 32%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 170 15% 90%;
+    --input: 170 15% 90%;
+    --ring: 163 52% 38%;
+
+    --radius: 0.75rem;
+
+    /* Custom brand tokens */
+    --brand-blue: 163 52% 38%;
+    --brand-blue-dark: 163 52% 28%;
+    --brand-blue-light: 163 20% 95%;
+    --brand-orange: 163 60% 45%;
+    --brand-orange-dark: 163 60% 35%;
+    --brand-green: 163 52% 38%;
+    --brand-green-light: 163 40% 50%;
+    --slate-dark: 200 15% 20%;
+    --slate-medium: 200 10% 46%;
+    --surface-warm: 170 10% 98%;
+    --cta-gradient: linear-gradient(135deg, hsl(163 52% 38%), hsl(163 52% 28%));
+    --hero-gradient: linear-gradient(135deg, hsl(163 20% 95%), hsl(170 15% 96%));
+    --accent-gradient: linear-gradient(135deg, hsl(163 60% 45%), hsl(163 60% 35%));
+    --green-gradient: linear-gradient(135deg, hsl(163 52% 38%), hsl(163 40% 50%));
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight text-foreground;
+  }
+}
+
+@layer utilities {
+  .gradient-cta {
+    background: var(--cta-gradient);
+  }
+  .gradient-hero {
+    background: var(--hero-gradient);
+  }
+  .gradient-accent {
+    background: var(--accent-gradient);
+  }
+  .gradient-green {
+    background: var(--green-gradient);
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+html {
+  scroll-behavior: smooth;
+}
